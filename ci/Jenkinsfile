@@ -4,7 +4,7 @@ package ci
 timestamps {
     ansiColor('xterm') {
         node {
-            withEnv(['REPO=devops-case-study') {                
+            withEnv(['REPO=devops-case-study']) {
                 switch (env.BRANCH) {
                     case ~/release*/:
                         load('ci/ci_helper/release.groovy')()
