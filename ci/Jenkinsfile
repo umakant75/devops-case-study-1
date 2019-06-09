@@ -5,10 +5,10 @@ node {
     withEnv(['REPO=devops-case-study']) {
         switch (env.BRANCH) {
             case ~/release.*/:
-                load('ci/ci_helper/release.groovy')()
+                load('ci_helper/release.groovy')()
                 break
             case ~/story.*/:
-                load('ci/ci_helper/development.groovy')()
+                load('ci_helper/development.groovy')()
                 break
             default:
                 println "No action performed, invalid branch selected"
