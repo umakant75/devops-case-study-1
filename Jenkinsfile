@@ -1,4 +1,4 @@
-pipeline {
+\pipeline {
  agent any
  stages{
       stage('checkout')
@@ -71,6 +71,15 @@ pipeline {
           }
          } 
         }
+        
+       stage('Prod-Deployment'){
+         steps{
+          dir('ci_helper/kubernetes/deploy'){
+              
+              sh  'script : deploy.sh'
+            }
+           }
+         }
      
   }
            post {  
