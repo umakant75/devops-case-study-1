@@ -5,7 +5,7 @@ pipeline {
       {
           steps{
               withCredentials([usernameColonPassword(credentialsId: 'gitCredentials', variable: 'gitCredentilas')]) {
-                  git 'https://github.com/sacpv/devops-case-study'
+                  git 'https://github.com/umakant75/devops-case-study-1.git'
               }
           }
       }
