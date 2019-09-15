@@ -11,7 +11,7 @@ pipeline {
      stage('Build & Run Junit'){
          steps{
         withMaven(maven:'MyMaven'){
-          dir('DevOpsCaseStudy'){
+          dir('DevOpsCaseStudy1'){
             sh 'chmod +x src/main/resources/chromedriver'
             sh '''
             mvn clean install -B -U -q -Dmaven.test.failure.ignore=true -DskipTests
