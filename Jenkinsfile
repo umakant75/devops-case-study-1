@@ -4,10 +4,8 @@ pipeline {
       stage('checkout')
       {
           steps{
-              withCredentials([usernameColonPassword(credentialsId: 'gitCredentials', variable: 'gitCredentilas')]) {
-                  git 'https://github.com/umakant75/devops-case-study-1.git'
-              }
-          }
+                 git 'https://github.com/umakant75/devops-case-study-1.git'
+               }
       }
       
      stage('Build & Run Junit'){
