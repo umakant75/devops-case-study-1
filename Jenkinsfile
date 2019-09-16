@@ -12,7 +12,7 @@ pipeline {
          steps{
         withMaven(maven:'MyMaven'){
           dir('DevOpsCaseStudy'){
-            sh 'sudo chmod +x src/main/resources/chromedriver'
+            sh 'chmod +x src/main/resources/chromedriver'
             sh '''
             mvn clean install -B -U -q -Dmaven.test.failure.ignore=true -DskipTests
             '''
