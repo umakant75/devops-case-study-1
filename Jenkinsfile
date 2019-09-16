@@ -16,7 +16,7 @@ pipeline {
             sh '''
             mvn clean install -B -U -q -Dmaven.test.failure.ignore=true -DskipTests
             '''
-            /*junit 'target/surefire-reports/**/*.xml' */
+            junit 'target/surefire-reports/**/*.xml' 
           }
          }
         }
